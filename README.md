@@ -1,14 +1,15 @@
-# 🚀 Containerized WordPress with Nginx Proxy
 
-A high-performance WordPress setup using **Docker Compose**, featuring a custom Nginx reverse proxy and advanced health checks. ✨
+    
+    style DB fill:#f9f,stroke:#333,stroke-width:2px
+    style Nginx fill:#bbf,stroke:#333,stroke-width:2px# 🛡️ Secure Zero-Trust WordPress
 
-### 🛠 Tech Stack:
-* **🌐 Nginx Proxy:** Efficiently handles traffic on port `80`.
-* **🐘 MariaDB + Healthcheck:** WordPress waits for DB readiness (`service_healthy`).
-* **🔒 Secure Env:** Sensitive credentials managed via `.env`.
-* **🐳 Docker Optimized:** Seamless container orchestration and networking.
+A high-performance WordPress setup using **Docker Compose**, featuring a custom Nginx reverse proxy and strict network isolation (3-Tier Architecture). ✨
 
-### 🚦 Quick Start:
-1. Copy `.env.example` to `.env` and set your passwords. 📝
-2. Run `docker compose up -d` 🐳
-3. Open `http://localhost` and start building! 💻
+### 🛠 Tech Stack
+* 🌐 **Nginx Proxy:** Efficiently handles traffic on port 80, isolating the backend.
+* 🐘 **MariaDB:** Completely hidden in a private network with `service_healthy` checks.
+* 🔒 **Secure Env:** Sensitive credentials managed strictly via `.env`.
+* 🐳 **Docker Optimized:** Seamless orchestration with Zero-Trust security principles.
+
+### 🚦 Quick Start
+Copy `.env.example` to `.env` 📝, run `docker compose up -d` 🐳, and start building at `http://localhost` 💻.
