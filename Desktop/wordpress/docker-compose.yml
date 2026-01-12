@@ -10,7 +10,7 @@ services:
     depends_on:
      - wordpress
     networks:
-     - wp_network
+     - frontend_net
 
   wordpress:
     container_name: wordpress
@@ -21,10 +21,13 @@ services:
     restart: unless-stopped
     env_file:
      - .env
+    environment:
+      WORDPRESS_BD_HOST: db:3306
     volumes:
      - wp_data:/var/www/html
     networks:
-     - wp_network
+     - frontend_net
+     - backend_net
 
   db:
     container_name: db
@@ -41,11 +44,15 @@ services:
     volumes:
      - db_data:/var/lib/mysql
     networks:
-     - wp_network
+     - backend_net
 
 volumes:
   wp_data:
   db_data:
 
 networks:
-  wp_network:
+  frontend_net:
+   driver: bridge
+  backend_net:
+   driver: bridge
+   internal: true
