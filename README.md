@@ -1,7 +1,4 @@
-
-    
-    style DB fill:#f9f,stroke:#333,stroke-width:2px
-    style Nginx fill:#bbf,stroke:#333,stroke-width:2px# 🛡️ Secure Zero-Trust WordPress
+# 🛡️ Secure Zero-Trust WordPress
 
 A high-performance WordPress setup using **Docker Compose**, featuring a custom Nginx reverse proxy and strict network isolation (3-Tier Architecture). ✨
 
